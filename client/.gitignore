@@ -1,0 +1,8 @@
+node_modules
+
+# dotenv environment variables file
+.env
+
+# Server-specific .env files
+.env.local
+.env.*.local
