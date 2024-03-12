@@ -31,8 +31,7 @@ jspm_packages/
 # TypeScript v1 declaration files
 typings/
 
-# Optional npm cache directory
-.npm
+
 
 # Optional eslint cache
 .eslintcache
@@ -46,12 +45,7 @@ typings/
 # Yarn Integrity file
 .yarn-integrity
 
-# dotenv environment variables file
-.env
 
-# Server-specific .env files
-.env.local
-.env.*.local
 
 # End of https://www.toptal.com/developers/gitignore/api/node
 
