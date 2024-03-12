@@ -45,6 +45,8 @@ typings/
 # Yarn Integrity file
 .yarn-integrity
 
+# Environment variables file
+.env
 
 
 # End of https://www.toptal.com/developers/gitignore/api/node

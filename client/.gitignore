@@ -1,8 +1,8 @@
 node_modules
 
-# dotenv environment variables file
+
+# Environment variables file
 .env
 
-# Server-specific .env files
-.env.local
-.env.*.local
+# Production build files (if any)
+/build/
