@@ -106,11 +106,23 @@ const isAdmin = async (req, res) => {
     }
 }
 
+// Assuming you have userModel defined properly and imported
+
 const ContactData = async (req, res) => {
     try {
-      const data = await userModel.find(); // Assuming userModel is imported and correctly defined
+      const page = req.query.page ? parseInt(req.query.page) : 1;
+      const limit = req.query.limit ? parseInt(req.query.limit) : 8;
   
-      res.status(200).json(data); // Sending data in the correct format
+      const skip = (page - 1) * limit;
+      const total = await userModel.countDocuments();
+      
+      const data = await userModel.find().skip(skip).limit(limit);
+  
+      res.status(200).json({
+        data,
+        currentPage: page,
+        totalPages: Math.ceil(total / limit)
+      });
     } catch (error) {
       console.error('Error fetching data:', error);
       res.status(500).json({
@@ -119,6 +131,7 @@ const ContactData = async (req, res) => {
       });
     }
   };
+  
   
 
 export { ContactControllers , isAdmin , loginController , ContactData};

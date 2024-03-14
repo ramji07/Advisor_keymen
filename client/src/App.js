@@ -38,7 +38,7 @@ import TaxConsultancyServices from './VirtualCFO/TaxConsultancyServices'
 import RemoteCFOServices from './VirtualCFO/RemoteCFOServices'
 import OnDemandCFO from './VirtualCFO/OnDemandCFO'
 import Login from './pages/Login';
-import AdminDashboard from './pages/Admin/AdminDashboard';
+import AdminDashboard from './Admin/AdminDashboard';
 import PrivateRoutes from './Components/Routes/PrivateRoutes';
 function App() {
   return (
